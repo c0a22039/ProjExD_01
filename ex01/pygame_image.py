@@ -9,13 +9,15 @@ def main():
     bg_img = pg.image.load("C:\\Users\\c0a22\\OneDrive\\ドキュメント\\CS2年後期\\ProjExD2023\\ex01\\fig\\pg_bg.jpg") #画像の読み込み
     kk_img=pg.image.load("C:\\Users\\c0a22\\OneDrive\\ドキュメント\\CS2年後期\\ProjExD2023\\ex01\\fig\\3.png")
     kk_img=pg.transform.flip(kk_img,True,False)#上書き代入
+    kk_img2=pg.transform.rotozoom(kk_img,10,1.0)
+    kk_imgs=[kk_img,kk_img2]#回転した奴としてないやつのリスト
     tmr = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
-        screen.blit(kk_img, [300, 200]) #追加行
+        screen.blit(kk_img, [300, 200]) #こうかとんの読み込み
         pg.display.update()
         tmr += 1        
         clock.tick(10)
