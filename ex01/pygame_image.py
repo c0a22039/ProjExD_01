@@ -18,8 +18,9 @@ def main():
     #for i in range[10]:
 
     #kk_img2=pg.transform.rotozoom(kk_img,10,1.0)#回転画像
-    kk_img2=pg.transform.rotozoom(kk_img,5,1.0)#回転画像
-    kk_img3=pg.transform.rotozoom(kk_img,10,1.0)#回転画像
+    kk_img2=pg.transform.rotozoom(kk_img,3,1.0)#回転画像
+    kk_img3=pg.transform.rotozoom(kk_img,6,1.0)#回転画像
+    kk_img4=pg.transform.rotozoom(kk_img,9,1.0)#回転画像
         #kk_img.append(kk_imgs)
         #i+=1
         
@@ -31,7 +32,7 @@ def main():
     #kk_img10=pg.transform.rotozoom(kk_img8,10,1.0)#回転させる
 
     #kk_imgs=[kk_img,kk_img2,kk_img4,kk_img6,kk_img8,kk_img10]#回転した奴としてないやつのリスト
-    kk_imgs=[kk_img,kk_img2,kk_img3]
+    kk_imgs=[kk_img,kk_img2,kk_img3,kk_img4]
 
     tmr = 0
     while True:
@@ -44,7 +45,7 @@ def main():
         screen.blit(bg_img2, [-x, 0])#さいしょ
         screen.blit(bg_img, [1600-x, 0])#さいご(tmrが1600になったとき)
         #screen.blit(kk_imgs[tmr%1], [300, 200]) #こうかとんの読み込み
-        screen.blit(kk_imgs[tmr%3], [300, 200]) 
+        screen.blit(kk_imgs[tmr%4], [300, 200]) 
     
         
         #screen.blit(kk_img, [300, 200]) #こうかとんの読み込み
