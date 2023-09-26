@@ -12,12 +12,6 @@ def main():
     kk_img=pg.image.load("C:\\Users\\c0a22\\OneDrive\\ドキュメント\\CS2年後期\\ProjExD2023\\ex01\\fig\\3.png")
     kk_img=pg.transform.flip(kk_img,True,False)#上書き代入
 
-
-    #kk_imgs=[]
-    #number= list(range(1, 10))
-    #for i in range[10]:
-
-    #kk_img2=pg.transform.rotozoom(kk_img,10,1.0)#回転画像
     kk_img2=pg.transform.rotozoom(kk_img,3,1.0)#回転画像
     kk_img3=pg.transform.rotozoom(kk_img,6,1.0)#回転画像
     kk_img4=pg.transform.rotozoom(kk_img,9,1.0)#回転画像
@@ -38,11 +32,13 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        x=tmr%1600
+        x=tmr%3200
             
 
-        screen.blit(bg_img2, [-x, 0])#さいしょ
-        screen.blit(bg_img, [1600-x, 0])#さいご(tmrが1600になったとき)
+        screen.blit(bg_img2, [-x, 0])#1枚目
+        screen.blit(bg_img, [1600-x, 0])#２枚目
+        screen.blit(bg_img2, [3200-x, 0])
+        
         #screen.blit(kk_imgs[tmr%1], [300, 200]) #こうかとんの読み込み
         screen.blit(kk_imgs[tmr%4], [300, 200]) 
     
@@ -50,7 +46,7 @@ def main():
         #screen.blit(kk_img, [300, 200]) #こうかとんの読み込み
         pg.display.update()
         tmr += 1        
-        clock.tick(10)
+        clock.tick(1000)
 
 
 if __name__ == "__main__":
