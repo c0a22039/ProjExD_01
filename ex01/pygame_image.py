@@ -31,7 +31,6 @@ def main():
     #kk_img8=pg.transform.rotozoom(kk_img6,8,1.0)#回転させる
     #kk_img10=pg.transform.rotozoom(kk_img8,10,1.0)#回転させる
 
-    #kk_imgs=[kk_img,kk_img2,kk_img4,kk_img6,kk_img8,kk_img10]#回転した奴としてないやつのリスト
     kk_imgs=[kk_img,kk_img2,kk_img3,kk_img4]
 
     tmr = 0
